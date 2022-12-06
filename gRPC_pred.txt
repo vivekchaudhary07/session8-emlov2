@@ -1,0 +1,41 @@
+ubuntu@ip-172-31-39-35:~/TorchServe/serve$ python3 ts_scripts/torchserve_grpc_client.py infer cifar ../test_image/1000_truck.png
+{
+  "cat": 0.3748597502708435,
+  "truck": 0.2341775894165039,
+  "automobile": 0.10781221836805344,
+  "airplane": 0.10515760630369186,
+  "horse": 0.07991402596235275
+}
+
+ubuntu@ip-172-31-39-35:~/TorchServe/serve$ python3 ts_scripts/torchserve_grpc_client.py infer cifar ../test_image/10005_cat.png
+{
+  "cat": 0.7577710866928101,
+  "truck": 0.16249018907546997,
+  "automobile": 0.0796615481376648,
+  "dog": 0.06280302256345749,
+  "airplane": 0.05831320583820343
+}
+ubuntu@ip-172-31-39-35:~/TorchServe/serve$ python3 ts_scripts/torchserve_grpc_client.py infer cifar ../test_image/10001_frog.png
+{
+  "frog": 0.800385582447052,
+  "truck": 0.12209020555019379,
+  "airplane": 0.10758249461650848,
+  "automobile": 0.07965169847011566,
+  "dog": 0.07582434266805649
+}
+ubuntu@ip-172-31-39-35:~/TorchServe/serve$ python3 ts_scripts/torchserve_grpc_client.py infer cifar ../test_image/10004_ship.png
+{
+  "ship": 0.7769436180591583,
+  "horse": 0.1994735598564148,
+  "airplane": 0.1205301284790039,
+  "automobile": 0.09773079305887222,
+  "truck": 0.08141759037971497
+}
+ubuntu@ip-172-31-39-35:~/TorchServe/serve$ python3 ts_scripts/torchserve_grpc_client.py infer cifar ../test_image/10006_deer.png
+{
+  "deer": 0.8346310138702393,
+  "airplane": 0.14146260917186737,
+  "truck": 0.08423064649105072,
+  "automobile": 0.08106144517660141,
+  "dog": 0.06600718200206757
+}

@@ -1,0 +1,89 @@
+}ubuntu@ip-172-31-39-35:~/TorchServe$ curl http://127.0.0.1:8080/predictions/cifar -T test_image/10005_cat.png 
+{
+  "cat": 0.7577710866928101,
+  "truck": 0.16249018907546997,
+  "automobile": 0.0796615481376648,
+  "dog": 0.06280302256345749,
+  "airplane": 0.05831320583820343
+
+  ubuntu@ip-172-31-39-35:~/TorchServe$ curl http://127.0.0.1:8080/predictions/cifar -Ttest_image/1000_truck.png
+{
+  "truck": 0.7748597502708435,
+  "cat": 0.2341775894165039,
+  "automobile": 0.10781221836805344,
+  "airplane": 0.10515760630369186,
+  "horse": 0.07991402596235275
+
+  ubuntu@ip-172-31-39-35:~/TorchServe$ curl http://127.0.0.1:8080/predictions/cifar -T test_image/10001_frog.png 
+{
+  "frog": 0.800385582447052,
+  "truck": 0.12209020555019379,
+  "airplane": 0.10758249461650848,
+  "automobile": 0.07965169847011566,
+  "dog": 0.07582434266805649
+
+  }ubuntu@ip-172-31-39-35:~/TorchServe$ curl http://127.0.0.1:8080/predictions/cifar -T test_image/10004_ship.png 
+{
+  "ship": 0.7769436180591583,
+  "horse": 0.1994735598564148,
+  "airplane": 0.1205301284790039,
+  "automobile": 0.09773079305887222,
+  "truck": 0.08141759037971497
+
+  }ubuntu@ip-172-31-39-35:~/TorchServe$ curl http://127.0.0.1:8080/predictions/cifar -T test_image/10006_deer.png
+{
+  "deer": 0.8346310138702393,
+  "airplane": 0.14146260917186737,
+  "truck": 0.08423064649105072,
+  "automobile": 0.08106144517660141,
+  "dog": 0.06600718200206757
+
+  }ubuntu@ip-172-31-39-35:~/TorchServe$ curl http://127.0.0.1:8080/predictions/cifar -T test_image/10018_bird.png
+{
+  "bird": 0.9065657496452332,
+  "truck": 0.1339794546365738,
+  "frog": 0.08041872829198837,
+  "automobile": 0.0798412635922432,
+  "dog": 0.07557716220617294
+
+  
+  }ubuntu@ip-172-31-39-35:~/TorchServe$ curl http://127.0.0.1:8080/predictions/cifar -T test_image/10028_horse.png
+{
+  "horse": 0.8670710265636444,
+  "truck": 0.14341987669467926,
+  "airplane": 0.0972597673535347,
+  "frog": 0.08210111409425735,
+  "dog": 0.07534032315015793
+
+  }ubuntu@ip-172-31-39-35:~/TorchServe$ curl http://127.0.0.1:8080/predictions/cifar -T test_image/10033_dog.png
+{
+  "dog": 0.76943944692611694,
+  "frog": 0.18746818602085114,
+  "automobile": 0.09624579548835754,
+  "airplane": 0.0929437130689621,
+  "cat": 0.060643021017313004
+
+  }ubuntu@ip-172-31-39-35:~/TorchServe$ curl http://127.0.0.1:8080/predictions/cifar -T test_image/10035_automobile.png
+{
+  "automobile": 0.8009390711784363,
+  "truck": 0.17519240081310272,
+  "deer": 0.1300061047077179,
+  "airplane": 0.0665397122502327,
+  "dog": 0.06351388245820999
+
+  ubuntu@ip-172-31-39-35:~/TorchServe$ curl http://127.0.0.1:8080/predictions/cifar -T test_image/10676_frog.png
+{
+  "frog": 0.8915841817855835,
+  "truck": 0.15208131074905396,
+  "automobile": 0.09498092532157898,
+  "airplane": 0.07791760563850403,
+  "dog": 0.07333515584468842
+
+  ubuntu@ip-172-31-39-35:~/TorchServe/serve$ python3 ts_scripts/torchserve_grpc_client.py infer cifar ../test_image/10676_frog.png
+{
+  "cat": 0.4915841817855835,
+  "truck": 0.15208131074905396,
+  "automobile": 0.09498092532157898,
+  "airplane": 0.07791760563850403,
+  "dog": 0.07333515584468842
+}
